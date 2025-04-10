@@ -47,7 +47,7 @@ export default function App() {
       activePage //handle navbar buttons and where they navigate to
     ) {
       case "site":
-        return <Site />;
+        return <Site siteName = {siteName} />;
       case "history":
         return <History />;
       case "search":
@@ -55,7 +55,7 @@ export default function App() {
       case "settings":
         return <Settings />;
       default:
-        return <Site />; //when initially opened it goes to the site page
+        return <Site siteName = {siteName} />; //when initially opened it goes to the site page
     }
   };
 

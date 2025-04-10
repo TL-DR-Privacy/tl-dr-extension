@@ -6,3 +6,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+.summary-list {
+  font-size: 14px;
+  color: #333;
+  white-space: pre-wrap;
+}
