@@ -14,8 +14,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Site from "./Site/Site";
-import History from "./History/History";
-import Search from "./Search/Search";
 import Settings from "./Settings/Settings";
 //import React from "react";
 
@@ -48,10 +46,6 @@ export default function App() {
     ) {
       case "site":
         return <Site siteName = {siteName} />;
-      case "history":
-        return <History />;
-      case "search":
-        return <Search />;
       case "settings":
         return <Settings />;
       default:
@@ -64,10 +58,6 @@ export default function App() {
     switch (activePage) {
       case "site":
         return `Site: ${siteName}`;
-      case "history":
-        return "History";
-      case "search":
-        return "Search";
       case "settings":
         return "Settings";
       default:
@@ -95,8 +85,6 @@ export default function App() {
       {/*display of navbar buttons*/}
       <div className="popup-nav">
         <button onClick={() => setActivePage("site")}>🔍 Site</button>
-        <button onClick={() => setActivePage("history")}>📜 History</button>
-        <button onClick={() => setActivePage("search")}>🔎 Search</button>
         <button onClick={() => setActivePage("settings")}>⚙️ Settings</button>
       </div>
     </div>
