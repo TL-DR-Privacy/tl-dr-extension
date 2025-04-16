@@ -20,7 +20,7 @@ const Site: FC<SiteProps> = ({ siteName }) => {
         const response = await axios.post(
           "https://tl-dr-privacy-production.up.railway.app/analyze",
           {
-            url: "https://${siteName}",
+            url: `https://${siteName}`,
           }
         );
         setSummary(response.data.summary);
