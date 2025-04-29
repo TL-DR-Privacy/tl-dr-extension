@@ -116,3 +116,47 @@ Known Faults: None
   /*this is here so site's title having to change size depending on url length doesn't impact the other titles*/
   font-size: 25px;
 }
+
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .app-container {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .content-area {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-mode .site-container {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.dark-mode .summary-list,
+.dark-mode .summary-list li,
+.dark-mode .error {
+  color: #ffffff;
+}
+
+.dark-mode .popup-nav {
+  background: #1e1e1e;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .popup-nav button {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark-mode .popup-nav button:hover {
+  background: #444;
+}
+
+.dark-mode .header-section .page-title {
+  color: #000000;
+}

@@ -1,22 +1,12 @@
-/*Checkbox list*/
-.checkbox-list {
+.settings-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding-left: 10px;
-    width: 100%;
-}
-
-/*Checkboxes*/
-.checkbox-item {
+    gap: 20px;
+    padding: 16px;
+  }
+  .setting-item label {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-size: 16px;
-    width: 100%;
-}
-
-/*Input of checkboxes*/
-.checkbox-item input {
-    margin-right: 8px;
-}
+  }

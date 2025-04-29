@@ -21,6 +21,8 @@ export default function App() {
   const [activePage, setActivePage] = useState("site");
   const [siteName, setSiteName] = useState("");
   const [fontSize, setFontSize] = useState(25);
+  const [darkMode, setDarkMode] = useState(false);
+  const [summaryFontSize, setSummaryFontSize] = useState(14);
 
   useEffect(() => {
     //get name of site the user is currently on
@@ -45,11 +47,30 @@ export default function App() {
       activePage //handle navbar buttons and where they navigate to
     ) {
       case "site":
-        return <Site siteName = {siteName} />;
+        return (
+          <Site
+            siteName={siteName}
+            summaryFontSize={summaryFontSize}
+            darkMode={darkMode}
+          />
+        );
       case "settings":
-        return <Settings />;
+        return (
+          <Settings
+            darkMode={darkMode}
+            onDarkModeChange={setDarkMode}
+            summaryFontSize={summaryFontSize}
+            onSummaryFontSizeChange={setSummaryFontSize}
+          />
+        );
       default:
-        return <Site siteName = {siteName} />; //when initially opened it goes to the site page
+        return (
+          <Site
+            siteName={siteName}
+            summaryFontSize={summaryFontSize}
+            darkMode={darkMode}
+          />
+        ); //when initially opened it goes to the site page
     }
   };
 
@@ -66,7 +87,7 @@ export default function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${darkMode ? "dark-mode" : ""}`}>
       <div className="header-section">
         <div className="logo-container">
           <img src="128.png" alt="TLDR Privacy Logo" className="app-logo" />{" "}
